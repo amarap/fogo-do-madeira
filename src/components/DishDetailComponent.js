@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody,
+import { Card, CardImg, CardText, CardBody,
     CardTitle } from 'reactstrap';
 
 
@@ -28,13 +28,11 @@ class DishDetail extends Component {
                                         <div>
                                             <div key={comm.id}>
                                                 <p><b>{comm.author}</b> --{comm.rating}-- </p>
-                                                <p><em>{comm.date}</em></p>
+                                                <p><em>{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day:           '2-digit'}).format(new Date(Date.parse(comm.date)))}</em></p>
                                                 <p>{comm.comment}</p>
                                             </div>
                                         </div>
                                     );
-           
-           
                                 })
                             }
                        </div>
