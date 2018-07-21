@@ -33,8 +33,8 @@ class CommentForm extends React.Component {
         this.setState({isModalOpen: !this.state.isModalOpen});
     }
     handleSubmit(values){
-        alert("Comment details are: " + JSON.stringify(values));
         this.toggleModal();
+        this.props.addComment(this.props.dishId, values.rating, values.name, values.comment);
     }
     render(){
         return (
@@ -101,7 +101,7 @@ class CommentForm extends React.Component {
     }
 }
 
-const RenderComments = ({comments}) => {
+const RenderComments = ({comments, addComment, dishId}) => {
     return (
         <div>
             <h4>Comments</h4>
@@ -109,13 +109,13 @@ const RenderComments = ({comments}) => {
                 comments.map((comm)=>{
                     return (
                             <div key={comm.id}>
-                                <p>{comm.comment}</p>
+                                <p><em>{comm.comment}</em></p>
                                 <p>-- <b>{comm.author}</b>, {comm.date}</p>
                             </div>
                     );
                 })
             }</div>
-            <CommentForm />
+            <CommentForm dishId={dishId} addComment={addComment} />
         </div>
     );
 }
@@ -139,7 +139,11 @@ const DishDetail = (props) => {
                             <RenderDish dishClicked={props.dishClicked} />
                         </div>
                         <div className="col-6 col-md-5 m-1">
-                            <RenderComments comments={props.comments} />
+                            <RenderComments 
+                                comments={props.comments}
+                                addComment={props.addComment}
+                                dishId={props.dishClicked.id}
+                            />
                         </div>
                     </div>
                </div>

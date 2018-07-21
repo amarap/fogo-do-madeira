@@ -6,7 +6,7 @@ export const COMMENTS =
         rating: 5,
         comment: "Imagine all the eatables, living in conFusion!",
         author: "John Lemon",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 1,
@@ -14,7 +14,7 @@ export const COMMENTS =
         rating: 4,
         comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
         author: "Paul McVites",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 2,
@@ -22,7 +22,7 @@ export const COMMENTS =
         rating: 3,
         comment: "Eat it, just eat it!",
         author: "Michael Jaikishan",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 3,
@@ -30,7 +30,7 @@ export const COMMENTS =
         rating: 4,
         comment: "Ultimate, Reaching for the stars!",
         author: "Ringo Starry",
-        date: "11 Jul, 2018"
+        date:"Mon 11 Jul 2018"
     },
     {
         id: 4,
@@ -38,7 +38,7 @@ export const COMMENTS =
         rating: 2,
         comment: "It's your birthday, we're gonna party!",
         author: "25 Cent",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 5,
@@ -46,7 +46,7 @@ export const COMMENTS =
         rating: 5,
         comment: "Imagine all the eatables, living in conFusion!",
         author: "John Lemon",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 6,
@@ -54,7 +54,7 @@ export const COMMENTS =
         rating: 4,
         comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
         author: "Paul McVites",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 7,
@@ -62,7 +62,7 @@ export const COMMENTS =
         rating: 3,
         comment: "Eat it, just eat it!",
         author: "Michael Jaikishan",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 8,
@@ -70,7 +70,7 @@ export const COMMENTS =
         rating: 4,
         comment: "Ultimate, Reaching for the stars!",
         author: "Ringo Starry",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 9,
@@ -78,7 +78,7 @@ export const COMMENTS =
         rating: 2,
         comment: "It's your birthday, we're gonna party!",
         author: "25 Cent",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 10,
@@ -86,7 +86,7 @@ export const COMMENTS =
         rating: 5,
         comment: "Imagine all the eatables, living in conFusion!",
         author: "John Lemon",
-        date:"11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 11,
@@ -94,7 +94,7 @@ export const COMMENTS =
         rating: 4,
         comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
         author: "Paul McVites",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 12,
@@ -102,7 +102,7 @@ export const COMMENTS =
         rating: 3,
         comment: "Eat it, just eat it!",
         author: "Michael Jaikishan",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 13,
@@ -110,7 +110,7 @@ export const COMMENTS =
         rating: 4,
         comment: "Ultimate, Reaching for the stars!",
         author: "Ringo Starry",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 14,
@@ -118,7 +118,7 @@ export const COMMENTS =
         rating: 2,
         comment: "It's your birthday, we're gonna party!",
         author: "25 Cent",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 15,
@@ -126,7 +126,7 @@ export const COMMENTS =
         rating: 5,
         comment: "Imagine all the eatables, living in conFusion!",
         author: "John Lemon",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 16,
@@ -134,7 +134,7 @@ export const COMMENTS =
         rating: 4,
         comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
         author: "Paul McVites",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 17,
@@ -142,7 +142,7 @@ export const COMMENTS =
         rating: 3,
         comment: "Eat it, just eat it!",
         author: "Michael Jaikishan",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 18,
@@ -150,7 +150,7 @@ export const COMMENTS =
         rating: 4,
         comment: "Ultimate, Reaching for the stars!",
         author: "Ringo Starry",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     },
     {
         id: 19,
@@ -158,6 +158,6 @@ export const COMMENTS =
         rating: 2,
         comment: "It's your birthday, we're gonna party!",
         author: "25 Cent",
-        date: "11 Jul, 2018"
+        date: "Mon 11 Jul 2018"
     }
 ];
