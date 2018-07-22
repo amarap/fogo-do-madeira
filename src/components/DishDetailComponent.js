@@ -3,12 +3,13 @@ import { Card, CardImg, CardText, CardBody,
     CardTitle, Breadcrumb, BreadcrumbItem, Button, Modal, ModalHeader, ModalBody, Label, Row } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
-import { Loading } from './LoadingComponent'
+import { Loading } from './LoadingComponent';
+import { baseUrl } from '../shared/baseUrl';
 
 const RenderDish = ({dishClicked}) => {
     return (
           <Card>
-            <CardImg top width="100%" src={dishClicked.image} alt={dishClicked.name} />
+            <CardImg top width="100%" src={baseUrl + dishClicked.image} alt={dishClicked.name} />
             <CardBody>
               <CardTitle>{dishClicked.name}</CardTitle>
               <CardText>{dishClicked.description}</CardText>
