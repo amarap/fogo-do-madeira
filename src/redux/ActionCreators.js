@@ -1,6 +1,44 @@
 import * as ActionTypes from './ActionTypes';
-import { DISHES } from '../shared/dishes';
 import { baseUrl } from '../shared/baseUrl';
+
+export const postFeedback = (firstname, lastname, telnum, email, agree, contactType, message) => (dispatch) => {
+    const newFeedback = {
+        firstname: firstname,
+        lastname: lastname,
+        telnum: telnum,
+        email: email,
+        agree: agree,
+        contactType: contactType,
+        message: message
+    };  
+    
+    newFeedback.date = new Date().toDateString();
+    
+    return fetch(baseUrl + 'feedback', {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newFeedback),
+        credentials: 'same-origin'
+        })
+        .then(response => {
+            if (response.ok){
+                return response;
+            }
+            else {
+                var error = new Error('Error '+response.status +': ' + response.statusText);
+                error.response = response;
+                throw error;
+            }
+        }, error => {
+            var errmsg = new Error(error.message);
+            throw errmsg;
+        })
+        .then(response => response.json())
+        .then(response => {alert("Your feedback was uploaded SUCCESSFULLY :) Thank you!"); })
+        .catch(error => { alert("Your feedback could not be uploaded\nError: " + error.message); });
+}
 
 export const addComment = (comment) => ({
     type: ActionTypes.ADD_COMMENT,
@@ -23,7 +61,7 @@ export const postComment = (dishId, rating, author, comment) => (dispatch) => {
         },
         body: JSON.stringify(newComment),
         credentials: 'same-origin'
-    })
+        })
         .then(response => {
             if (response.ok){
                 return response;
