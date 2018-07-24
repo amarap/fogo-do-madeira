@@ -36,7 +36,7 @@ export const postFeedback = (firstname, lastname, telnum, email, agree, contactT
             throw errmsg;
         })
         .then(response => response.json())
-        .then(response => {alert("Your feedback was uploaded SUCCESSFULLY :) Thank you!"); })
+        .then(response => {alert("Your feedback was uploaded SUCCESSFULLY :) Thank you!\n" + JSON.stringify(response)); })
         .catch(error => { alert("Your feedback could not be uploaded\nError: " + error.message); });
 }
 
