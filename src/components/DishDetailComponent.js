@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
+import {FadeTransform, Fade, Stagger} from 'react-animation-components'
 
 const RenderDish = ({dishClicked}) => {
     return (
+        <FadeTransform in transformProps={{exitTransform: 'scale(0.5) translateY(-50%)'}} >
           <Card>
             <CardImg top width="100%" src={baseUrl + dishClicked.image} alt={dishClicked.name} />
             <CardBody>
@@ -15,6 +17,7 @@ const RenderDish = ({dishClicked}) => {
               <CardText>{dishClicked.description}</CardText>
             </CardBody>
           </Card>
+        </FadeTransform>
     );
 }
 
@@ -107,16 +110,22 @@ const RenderComments = ({comments, postComment, dishId}) => {
     return (
         <div>
             <h4>Comments</h4>
-            <div>{
-                comments.map((comm)=>{
-                    return (
-                            <div key={comm.id}>
-                                <p><em>{comm.comment}</em></p>
-                                <p>-- <b>{comm.author}</b>, {comm.date}</p>
-                            </div>
-                    );
-                })
-            }</div>
+            <div>
+                <Stagger in>
+                {
+                    comments.map((comm)=>{
+                        return (
+                                <Fade in>
+                                    <div key={comm.id}>
+                                        <p><em>{comm.comment}</em></p>
+                                        <p>-- <b>{comm.author}</b>, {comm.date}</p>
+                                    </div>
+                                </Fade>
+                        );
+                    })
+                }
+                </Stagger>
+            </div>
             <CommentForm dishId={dishId} postComment={postComment} />
         </div>
     );
